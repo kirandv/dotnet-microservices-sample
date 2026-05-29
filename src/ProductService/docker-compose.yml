@@ -1,0 +1,18 @@
+```yaml id="y5c0mb"
+version: '3.9'
+
+services:
+
+  productservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: productservice-api
+
+    ports:
+      - "5001:8080"
+
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+```
